@@ -359,108 +359,6 @@ export interface SharedApplicationsAtUniSection extends Struct.ComponentSchema {
   };
 }
 
-export interface EntriesTeacherEntry extends Struct.ComponentSchema {
-  collectionName: 'components_entries_teacher_entries';
-  info: {
-    name: 'teacher_entry';
-    displayName: 'teacher_entry';
-    icon: 'microscope';
-    description: '';
-  };
-  attributes: {
-    teacher: Schema.Attribute.Relation<'oneToOne', 'api::teacher.teacher'>;
-    title: Schema.Attribute.String & Schema.Attribute.Private;
-  };
-}
-
-export interface EntriesStudyEntry extends Struct.ComponentSchema {
-  collectionName: 'components_entries_study_entries';
-  info: {
-    name: 'study_entry';
-    displayName: 'study_entry';
-    icon: 'pen-fancy';
-    description: '';
-  };
-  attributes: {
-    field_of_study: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::field-of-study.field-of-study'
-    >;
-    title: Schema.Attribute.String & Schema.Attribute.Private;
-  };
-}
-
-export interface EntriesStatisticEntry extends Struct.ComponentSchema {
-  collectionName: 'components_entries_statistic_entries';
-  info: {
-    name: 'statistic_entry';
-    displayName: 'statistic_entry';
-    icon: 'user-graduate';
-  };
-  attributes: {
-    year: Schema.Attribute.String & Schema.Attribute.Required;
-    single_entry: Schema.Attribute.Component<'entries.single-entry', true>;
-  };
-}
-
-export interface EntriesSingleEntry extends Struct.ComponentSchema {
-  collectionName: 'components_entries_single_entries';
-  info: {
-    name: 'single_entry';
-    displayName: 'single_entry';
-    icon: 'angle-right';
-  };
-  attributes: {
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    value: Schema.Attribute.String & Schema.Attribute.Required;
-  };
-}
-
-export interface EntriesGallery extends Struct.ComponentSchema {
-  collectionName: 'components_entries_galleries';
-  info: {
-    name: 'gallery';
-    displayName: 'gallery';
-    icon: 'grimace';
-    description: '';
-  };
-  attributes: {
-    galleries_uat: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::gallery-uat.gallery-uat'
-    >;
-    title: Schema.Attribute.String & Schema.Attribute.Private;
-  };
-}
-
-export interface EntriesFestivalEntry extends Struct.ComponentSchema {
-  collectionName: 'components_entries_festival_entries';
-  info: {
-    name: 'festival_entry';
-    displayName: 'festival_entry';
-    icon: 'baby-carriage';
-    description: '';
-  };
-  attributes: {
-    festival: Schema.Attribute.Relation<'oneToOne', 'api::festival.festival'>;
-    title: Schema.Attribute.String & Schema.Attribute.Private;
-  };
-}
-
-export interface EntriesEuProjectEntry extends Struct.ComponentSchema {
-  collectionName: 'components_entries_eu_project_entries';
-  info: {
-    name: 'eu_project_entry';
-    displayName: 'eu_project_entry';
-    icon: 'desktop';
-  };
-  attributes: {
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    link: Schema.Attribute.String & Schema.Attribute.Required;
-    description: Schema.Attribute.String;
-  };
-}
-
 export interface NavigationInternalLink extends Struct.ComponentSchema {
   collectionName: 'components_navigation_internal_links';
   info: {
@@ -566,6 +464,108 @@ export interface NavigationConditionalExternalLink
   };
 }
 
+export interface EntriesTeacherEntry extends Struct.ComponentSchema {
+  collectionName: 'components_entries_teacher_entries';
+  info: {
+    name: 'teacher_entry';
+    displayName: 'teacher_entry';
+    icon: 'microscope';
+    description: '';
+  };
+  attributes: {
+    teacher: Schema.Attribute.Relation<'oneToOne', 'api::teacher.teacher'>;
+    title: Schema.Attribute.String & Schema.Attribute.Private;
+  };
+}
+
+export interface EntriesStudyEntry extends Struct.ComponentSchema {
+  collectionName: 'components_entries_study_entries';
+  info: {
+    name: 'study_entry';
+    displayName: 'study_entry';
+    icon: 'pen-fancy';
+    description: '';
+  };
+  attributes: {
+    field_of_study: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::field-of-study.field-of-study'
+    >;
+    title: Schema.Attribute.String & Schema.Attribute.Private;
+  };
+}
+
+export interface EntriesStatisticEntry extends Struct.ComponentSchema {
+  collectionName: 'components_entries_statistic_entries';
+  info: {
+    name: 'statistic_entry';
+    displayName: 'statistic_entry';
+    icon: 'user-graduate';
+  };
+  attributes: {
+    year: Schema.Attribute.String & Schema.Attribute.Required;
+    single_entry: Schema.Attribute.Component<'entries.single-entry', true>;
+  };
+}
+
+export interface EntriesSingleEntry extends Struct.ComponentSchema {
+  collectionName: 'components_entries_single_entries';
+  info: {
+    name: 'single_entry';
+    displayName: 'single_entry';
+    icon: 'angle-right';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface EntriesGallery extends Struct.ComponentSchema {
+  collectionName: 'components_entries_galleries';
+  info: {
+    name: 'gallery';
+    displayName: 'gallery';
+    icon: 'grimace';
+    description: '';
+  };
+  attributes: {
+    galleries_uat: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::gallery-uat.gallery-uat'
+    >;
+    title: Schema.Attribute.String & Schema.Attribute.Private;
+  };
+}
+
+export interface EntriesFestivalEntry extends Struct.ComponentSchema {
+  collectionName: 'components_entries_festival_entries';
+  info: {
+    name: 'festival_entry';
+    displayName: 'festival_entry';
+    icon: 'baby-carriage';
+    description: '';
+  };
+  attributes: {
+    festival: Schema.Attribute.Relation<'oneToOne', 'api::festival.festival'>;
+    title: Schema.Attribute.String & Schema.Attribute.Private;
+  };
+}
+
+export interface EntriesEuProjectEntry extends Struct.ComponentSchema {
+  collectionName: 'components_entries_eu_project_entries';
+  info: {
+    name: 'eu_project_entry';
+    displayName: 'eu_project_entry';
+    icon: 'desktop';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    link: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -593,13 +593,6 @@ declare module '@strapi/strapi' {
       'shared.card-item': SharedCardItem;
       'shared.applications-at-university': SharedApplicationsAtUniversity;
       'shared.applications-at-uni-section': SharedApplicationsAtUniSection;
-      'entries.teacher-entry': EntriesTeacherEntry;
-      'entries.study-entry': EntriesStudyEntry;
-      'entries.statistic-entry': EntriesStatisticEntry;
-      'entries.single-entry': EntriesSingleEntry;
-      'entries.gallery': EntriesGallery;
-      'entries.festival-entry': EntriesFestivalEntry;
-      'entries.eu-project-entry': EntriesEuProjectEntry;
       'navigation.internal-link': NavigationInternalLink;
       'navigation.image-box-link': NavigationImageBoxLink;
       'navigation.footer-section': NavigationFooterSection;
@@ -607,6 +600,13 @@ declare module '@strapi/strapi' {
       'navigation.download-link': NavigationDownloadLink;
       'navigation.conditional-internal-link': NavigationConditionalInternalLink;
       'navigation.conditional-external-link': NavigationConditionalExternalLink;
+      'entries.teacher-entry': EntriesTeacherEntry;
+      'entries.study-entry': EntriesStudyEntry;
+      'entries.statistic-entry': EntriesStatisticEntry;
+      'entries.single-entry': EntriesSingleEntry;
+      'entries.gallery': EntriesGallery;
+      'entries.festival-entry': EntriesFestivalEntry;
+      'entries.eu-project-entry': EntriesEuProjectEntry;
     }
   }
 }

@@ -1124,7 +1124,7 @@ export interface ApiGalleryUatGalleryUat extends Struct.CollectionTypeSchema {
 }
 
 export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
-  collectionName: 'homepages';
+  collectionName: 'home-page';
   info: {
     singularName: 'homepage';
     pluralName: 'homepages';
@@ -1494,7 +1494,7 @@ export interface ApiMenuStudentMenuStudent extends Struct.SingleTypeSchema {
 }
 
 export interface ApiNewsEntryNewsEntry extends Struct.CollectionTypeSchema {
-  collectionName: 'news_entries';
+  collectionName: 'news';
   info: {
     singularName: 'news-entry';
     pluralName: 'news-entries';

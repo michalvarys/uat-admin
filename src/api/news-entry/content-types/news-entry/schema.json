@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "news_entries",
+  "collectionName": "news",
   "info": {
     "singularName": "news-entry",
     "pluralName": "news-entries",
